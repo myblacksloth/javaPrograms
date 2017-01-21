@@ -323,6 +323,112 @@ public class UserListeConcatenate {
 		
 		
 		
+		
+		
+		
+		
+		
+		class deleteSurnameButtonListenerClass implements ActionListener
+		{
+			@Override
+			public void actionPerformed (ActionEvent e)
+			{
+				contentPanel.removeAll();
+				JPanel removePanel = new JPanel();
+				removePanel.setLayout(new BorderLayout());
+				//
+				JLabel titlePanel = new JLabel("Remove by Surname");
+				JLabel label = new JLabel("Surname to remove");
+				JTextField jtf = new JTextField();
+				JButton delButton = new JButton("Remove");
+				//
+				removePanel.add(titlePanel, BorderLayout.NORTH);
+				removePanel.add(label, BorderLayout.WEST);
+				removePanel.add(jtf, BorderLayout.CENTER);
+				removePanel.add(delButton, BorderLayout.EAST);
+				//
+				contentPanel.add(removePanel);
+				f.pack();
+				class delButtonListenerClassListener implements ActionListener
+				{
+					@Override
+					public void actionPerformed (ActionEvent e)
+					{
+						myIterator.reset();
+						while (myIterator.hasNext())
+						{
+							Studente stud = myIterator.next();
+							if (stud.getSurname().equals(jtf.getText())) myIterator.remove();
+						} //end of while
+						//
+					} //end of internal actionPerformed
+				} //end of delButtonListenerClass
+				//
+				ActionListener delButtonListenerClass = new delButtonListenerClassListener();
+				delButton.addActionListener(delButtonListenerClass);
+				//
+			} //end of external actionPerformed
+		} //end of deleteSurnameButtonListenerClass
+		
+		ActionListener deleteSurnameButtonListener = new deleteSurnameButtonListenerClass();
+		deleteSurnameButton.addActionListener(deleteSurnameButtonListener);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		class deleteNumberButtonListenerClass implements ActionListener
+		{
+			@Override
+			public void actionPerformed (ActionEvent e)
+			{
+				contentPanel.removeAll();
+				JPanel removePanel = new JPanel();
+				removePanel.setLayout(new BorderLayout());
+				//
+				JLabel titlePanel = new JLabel("Remove by Surname");
+				JLabel label = new JLabel("Surname to remove");
+				JTextField jtf = new JTextField();
+				JButton delButton = new JButton("Remove");
+				//
+				removePanel.add(titlePanel, BorderLayout.NORTH);
+				removePanel.add(label, BorderLayout.WEST);
+				removePanel.add(jtf, BorderLayout.CENTER);
+				removePanel.add(delButton, BorderLayout.EAST);
+				//
+				contentPanel.add(removePanel);
+				f.pack();
+				class delButtonListenerClassListener implements ActionListener
+				{
+					@Override
+					public void actionPerformed (ActionEvent e)
+					{
+						myIterator.reset();
+						Studente stud;
+						while (myIterator.hasNext())
+						{
+							stud = myIterator.next();
+							if (stud.getSerial() == Integer.parseInt(jtf.getText())) myIterator.remove();
+						} //end of while
+						//
+					} //end of internal actionPerformed
+				} //end of delButtonListenerClass
+				//
+				ActionListener delButtonListenerClass = new delButtonListenerClassListener();
+				delButton.addActionListener(delButtonListenerClass);
+				//
+			} //end of external actionPerformed
+		} //end of deleteSurnameButtonListenerClass
+		
+		ActionListener deleteNumberButtonListener = new deleteNumberButtonListenerClass();
+		deleteNumberButton.addActionListener(deleteNumberButtonListener);
+		
+		
+		
 	} //end of main
 
 } //end of class
