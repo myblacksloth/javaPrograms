@@ -336,17 +336,17 @@ public class UserListeConcatenate {
 				contentPanel.removeAll();
 				JPanel removePanel = new JPanel();
 				removePanel.setLayout(new BorderLayout());
-				//
+				
 				JLabel titlePanel = new JLabel("Remove by Surname");
 				JLabel label = new JLabel("Surname to remove");
 				JTextField jtf = new JTextField();
 				JButton delButton = new JButton("Remove");
-				//
+				
 				removePanel.add(titlePanel, BorderLayout.NORTH);
 				removePanel.add(label, BorderLayout.WEST);
 				removePanel.add(jtf, BorderLayout.CENTER);
 				removePanel.add(delButton, BorderLayout.EAST);
-				//
+				
 				contentPanel.add(removePanel);
 				f.pack();
 				class delButtonListenerClassListener implements ActionListener
@@ -354,19 +354,19 @@ public class UserListeConcatenate {
 					@Override
 					public void actionPerformed (ActionEvent e)
 					{
-						myIterator.reset();
-						while (myIterator.hasNext())
+						myIterator.reset(); //reset the list's iterator
+						while (myIterator.hasNext()) //il ciclo while scorre la lista fintanto che esiste un nodo successivo a quello corrente
 						{
-							Studente stud = myIterator.next();
-							if (stud.getSurname().equals(jtf.getText())) myIterator.remove();
+							Studente stud = myIterator.next(); //la variabile stud salva il valore puntato dall'iteratore e fa scorrere in avanti l'iteratore
+							if (stud.getSurname().equals(jtf.getText())) myIterator.remove(); //se il cognome dell'oggetto corrente corrisponde a quello da eliminare il nodo viene eliminato
 						} //end of while
-						//
+						
 					} //end of internal actionPerformed
 				} //end of delButtonListenerClass
-				//
+				
 				ActionListener delButtonListenerClass = new delButtonListenerClassListener();
 				delButton.addActionListener(delButtonListenerClass);
-				//
+				
 			} //end of external actionPerformed
 		} //end of deleteSurnameButtonListenerClass
 		
@@ -389,17 +389,17 @@ public class UserListeConcatenate {
 				contentPanel.removeAll();
 				JPanel removePanel = new JPanel();
 				removePanel.setLayout(new BorderLayout());
-				//
+				
 				JLabel titlePanel = new JLabel("Remove by Surname");
 				JLabel label = new JLabel("Surname to remove");
 				JTextField jtf = new JTextField();
 				JButton delButton = new JButton("Remove");
-				//
+				
 				removePanel.add(titlePanel, BorderLayout.NORTH);
 				removePanel.add(label, BorderLayout.WEST);
 				removePanel.add(jtf, BorderLayout.CENTER);
 				removePanel.add(delButton, BorderLayout.EAST);
-				//
+				
 				contentPanel.add(removePanel);
 				f.pack();
 				class delButtonListenerClassListener implements ActionListener
@@ -407,25 +407,169 @@ public class UserListeConcatenate {
 					@Override
 					public void actionPerformed (ActionEvent e)
 					{
-						myIterator.reset();
-						Studente stud;
-						while (myIterator.hasNext())
+						myIterator.reset(); //reset dell'iteratore
+						Studente stud; //questa variabile dovra' immagazzinare lo studente contenuto nel nodo correntemente puntato dall'iteratore
+						while (myIterator.hasNext()) //mentre esiste un nodo successivo a quello corrente
 						{
-							stud = myIterator.next();
-							if (stud.getSerial() == Integer.parseInt(jtf.getText())) myIterator.remove();
+							stud = myIterator.next(); //lo studente memorizzato nel nodo corrente diviene il valore della variabile stud
+							if (stud.getSerial() == Integer.parseInt(jtf.getText())) myIterator.remove(); //se il seriale contenuto nel nodo corrent e' uguale a quello da eliminare viene eliminato il nodo corrente
 						} //end of while
-						//
+						
 					} //end of internal actionPerformed
 				} //end of delButtonListenerClass
-				//
+				
 				ActionListener delButtonListenerClass = new delButtonListenerClassListener();
 				delButton.addActionListener(delButtonListenerClass);
-				//
+				
 			} //end of external actionPerformed
 		} //end of deleteSurnameButtonListenerClass
 		
 		ActionListener deleteNumberButtonListener = new deleteNumberButtonListenerClass();
 		deleteNumberButton.addActionListener(deleteNumberButtonListener);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		class searchSurnameButtonListenerClass implements ActionListener
+		{
+			@Override
+			public void actionPerformed (ActionEvent e)
+			{
+				contentPanel.removeAll();
+				//
+				JPanel internalPanel = new JPanel();
+				internalPanel.setLayout(new BorderLayout());
+				//
+				JPanel searchPanel = new JPanel();
+				searchPanel.setLayout(new GridLayout(1,3));
+				//
+				JLabel label = new JLabel("Surname:");
+				JTextField jtf = new JTextField();
+				JButton fb = new JButton("Find");
+				
+				searchPanel.add(label); //1,1
+				searchPanel.add(jtf); //1,2
+				searchPanel.add(fb); //1,3
+				
+				JLabel title = new JLabel("Search by Surname");
+				
+				internalPanel.add(title, BorderLayout.NORTH);
+				internalPanel.add(searchPanel, BorderLayout.CENTER);
+				contentPanel.add(internalPanel);
+				f.pack();
+				
+				class fbListenerClass implements ActionListener
+				{
+					@Override
+					public void actionPerformed (ActionEvent e)
+					{
+						String results = "<html><table border=\"1\"><tr><th>Surname</th><th>Name</th><th>Serial Number</th><th>Exam's Name</th><th>Exam's Vote</th></tr>";
+						myIterator.reset(); //reset dell'iteratore
+						while (myIterator.hasNext()) //fintanto che nella lista esiste un nodo
+						{
+							Studente stud = myIterator.next();
+							if (stud.getSurname().equals(jtf.getText())) results += "<tr><td>" + stud.getSurname() + "</td><td>" + stud.getName() + "</td><td>" + stud.getSerial() + "</td><td>" + stud.getExamName() + "</td><td>" + stud.getExamVote() + "</td></tr>";
+						} //end of while
+						results += "</table></html>";
+						JLabel labelResults = new JLabel(results);
+						internalPanel.add(labelResults, BorderLayout.SOUTH);
+						f.pack();
+					} //end of internal actionPerformed
+				} //end of fbListenerClass
+				
+				ActionListener fbListener = new fbListenerClass();
+				fb.addActionListener(fbListener);
+				
+			} //end of external actionPerformed
+		} //end of searchSurnameButtonListenerClass
+		
+		ActionListener searchSurnameButtonListener = new searchSurnameButtonListenerClass();
+		searchSurnameButton.addActionListener(searchSurnameButtonListener);
+		
+		
+		
+		
+		
+		
+		
+		
+		class searchNumberButtonListenerClass implements ActionListener
+		{
+			@Override
+			public void actionPerformed (ActionEvent e)
+			{
+				contentPanel.removeAll();
+				
+				JPanel internalPanel = new JPanel();
+				internalPanel.setLayout(new BorderLayout());
+				
+				JPanel searchPanel = new JPanel();
+				searchPanel.setLayout(new GridLayout(1,3));
+				
+				JLabel label = new JLabel();
+				JTextField jtf = new JTextField();
+				JButton fb = new JButton("Find");
+				
+				searchPanel.add(label); //1,1
+				searchPanel.add(jtf); //1,2
+				searchPanel.add(fb); //1,3
+				
+				JLabel title = new JLabel("Search by Surname");
+				
+				internalPanel.add(title, BorderLayout.NORTH);
+				internalPanel.add(searchPanel, BorderLayout.CENTER);
+				contentPanel.add(internalPanel);
+				f.pack();
+				
+				class fbListenerClass implements ActionListener
+				{
+					@Override
+					public void actionPerformed (ActionEvent e)
+					{
+						String results = "<html><table border=\"1\"><tr><th>Surname</th><th>Name</th><th>Serial Number</th><th>Exam's Name</th><th>Exam's Vote</th></tr>";
+						myIterator.reset(); //reset dell'iteratore
+						while (myIterator.hasNext()) //fintanto che nella lista esiste un nodo
+						{
+							Studente stud = myIterator.next();
+							if (stud.getSerial() == Integer.parseInt(jtf.getText())) results += "<tr><td>" + stud.getSurname() + "</td><td>" + stud.getName() + "</td><td>" + stud.getSerial() + "</td><td>" + stud.getExamName() + "</td><td>" + stud.getExamVote() + "</td></tr>";
+						} //end of while
+						results += "</table></html>";
+						JLabel labelResults = new JLabel(results);
+						internalPanel.add(labelResults, BorderLayout.SOUTH);
+						f.pack();
+					} //end of internal actionPerformed
+				} //end of fbListenerClass
+				
+				ActionListener fbListener = new fbListenerClass();
+				fb.addActionListener(fbListener);
+				
+			} //end of external actionPerformed
+		} //end of searchSurnameButtonListenerClass
+
+		ActionListener searchNumberButtonListener = new searchNumberButtonListenerClass();
+		searchNumberButton.addActionListener(searchNumberButtonListener);
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
