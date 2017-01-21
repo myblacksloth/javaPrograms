@@ -6,4 +6,5 @@ public interface ListIterator {
 	void add(Studente element);
 	void remove();
 	void set (Studente element);
+	void reset();
 } //end of interface
