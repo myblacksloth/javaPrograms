@@ -113,6 +113,10 @@ public class ListaConcatenata {
 	public void removeLast() {
 		if (!(headList!=null)) //if (headList==null) //se headlist e' uguale a null vuol dire che la lista e' vuota
 			throw new NoSuchElementException(); //viene lanciata un eccezione inerente un elemento inesistente
+		else if (headList.link == null) {
+			removeFirst();
+			return;
+		} //end of if
 		
 		Node cur = headList; //questa variabile salva il nodo in testa alla lista e servira' a salvare il nodo corrente
 		Node previous = null; //questa variabile servira' a salvare il nodo precedente a quello corrente
@@ -239,6 +243,15 @@ public class ListaConcatenata {
 			current.student = s; //se current e' diverso da null il suo oggetto (student) viene modificato con quello passato al metodo
 		} //end of set
 		//
+		/**
+		 * Questo metodo effettua il reset dell'iteratore allo stato iniziale
+		 */
+		@Override
+		public void reset()
+		{
+			previous = null;
+			current = null;
+		} //end of reset
 	} //end of LinkedListIterator class
 	
 	
