@@ -575,30 +575,30 @@ public class UserListeConcatenate {
 			@Override
 			public void actionPerformed (ActionEvent e)
 			{
-				PrintWriter outFile;
+				PrintWriter outFile; //viene creata una variabile di tipo PrintWriter che servirà a stampare i dati all'interno del file
 				try {
-					fileChooser.setDialogTitle("Specify a file to save");
-					fileChooser.showSaveDialog(f);
-					outFile = new PrintWriter(fileChooser.getSelectedFile());
-				} catch(Exception exc) {
-					exc.printStackTrace();
-					return;
+					fileChooser.setDialogTitle("Specify a file to save"); //viene impostato un titolo per la finestra di dialogo realtiva alla scelta dei file
+					fileChooser.showSaveDialog(f); //viene mostrata una finestra di dialogo relativa al salvataggio dei file
+					outFile = new PrintWriter(fileChooser.getSelectedFile()); //la variabile outFile assume il valore del file scelto mediante la finestra per il salvataggio di un file
+				} catch(Exception exc) { //se non si riesce a scegliere un file in cui salvare
+					exc.printStackTrace(); //viene stampata la traccia dell'errore
+					return; //viene interrotta l'esecuzione del metodo
 				} //end of try/cathc
 				
-				String toFile="";
+				String toFile=""; //viene istituita una stringa in cui inserire i dati da salvare nel file
 				
-				Studente s;
-				myIterator.reset();
-				while (myIterator.hasNext())
+				Studente s; //viene creata una variabile di tipo studente
+				myIterator.reset(); //viene effettuato il reset dell'iteratore
+				while (myIterator.hasNext()) //fintanto che nella lista e' presente uno elemento successivo
 				{
-					s = myIterator.next();
-					toFile += s.getSurname() + " " + s.getName() + " " + s.getSerial() + " " + s.getExamName() + " " + s.getExamVote();
-					if (myIterator.hasNext()) toFile += '\n';
+					s = myIterator.next(); //lo studente s diviene lo studente del nodo attuale e si scorre al nodo successivo della lista, lo scanner avanza al nodo successivo
+					toFile += s.getSurname() + " " + s.getName() + " " + s.getSerial() + " " + s.getExamName() + " " + s.getExamVote(); //la stringa toFile viene aggiornata con i relativi dati dello studente contenuto nel nodo attuale
+					if (myIterator.hasNext()) toFile += '\n'; //(non effettua lo scorrimento dello scanner) se esite un nodo successivo a quello attuale vuol dire che c'e' uno studente successivo e quindi si inserisce un andata a capo in modo che lo studnete successivo, all'interno del file, sia situato alla riga successiva
 				} //end of while
 				
-				outFile.print(toFile);
+				outFile.print(toFile); //viene stampata la stringa toFile all'interno del file outFile
 				
-				outFile.close();
+				outFile.close(); //il file outFile viene chiuso
 			} //end of actionPerformed
 		} //end of saveDBButtonListenerClass
 
