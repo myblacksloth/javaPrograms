@@ -71,7 +71,6 @@ public class ListaConcatenata {
 	 */
 	public void addFirst(Studente s)
 	{
-		System.out.println("debug current data = " + s.getSurname() + " " + s.getName() + " " + s.getSerial() + " " + s.getExamName() + " " + s.getExamVote()); //debug
 		Node newNode = new Node(); //viene creato un nuovo nodo
 		
 		newNode.student = s; //l'oggetto studente del nuovo nodo diviene s, lo studente passato al metodo corrente
