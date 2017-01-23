@@ -81,6 +81,7 @@ public class UserListeConcatenate {
 			@Override
 			public void actionPerformed (ActionEvent e) {
 				//open database and load data
+				fileChooser.setDialogTitle("Specify a file to open");
 				fileChooser.showOpenDialog(f); //show new file chooser windows into frame f
 				try {
 					file = fileChooser.getSelectedFile(); //"file" become the file given by file chooser
@@ -561,6 +562,50 @@ public class UserListeConcatenate {
 
 		ActionListener searchNumberButtonListener = new searchNumberButtonListenerClass();
 		searchNumberButton.addActionListener(searchNumberButtonListener);
+		
+		
+		
+		
+		
+		
+		
+		
+		class saveDBButtonListenerClass implements ActionListener
+		{
+			@Override
+			public void actionPerformed (ActionEvent e)
+			{
+				PrintWriter outFile;
+				try {
+					fileChooser.setDialogTitle("Specify a file to save");
+					fileChooser.showSaveDialog(f);
+					outFile = new PrintWriter(fileChooser.getSelectedFile());
+				} catch(Exception exc) {
+					exc.printStackTrace();
+					return;
+				} //end of try/cathc
+				
+				String toFile="";
+				
+				Studente s;
+				myIterator.reset();
+				while (myIterator.hasNext())
+				{
+					s = myIterator.next();
+					toFile += s.getSurname() + " " + s.getName() + " " + s.getSerial() + " " + s.getExamName() + " " + s.getExamVote();
+					if (myIterator.hasNext()) toFile += '\n';
+				} //end of while
+				
+				outFile.print(toFile);
+				
+				outFile.close();
+			} //end of actionPerformed
+		} //end of saveDBButtonListenerClass
+
+		//saveDBButton.addActionListener(new saveDBButtonListenerClass());
+		ActionListener saveDBButtonListener = new saveDBButtonListenerClass();
+		saveDBButton.addActionListener(saveDBButtonListener);
+		
 		
 		
 		
