@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
+/**
+ * @author Antonio Maulucci http://www.antomau.com
+ */
 public class UserAlphabeticOrder {
 	
 	public static void main(String[] args) {
@@ -15,17 +18,21 @@ public class UserAlphabeticOrder {
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel console = new JPanel();
-		console.setLayout(new GridLayout(1,4));
+		console.setLayout(new GridLayout(1,6));
 		
 		JButton loadButton = new JButton("Open file");
 		JButton printButton = new JButton("Print ordered words");
 		JButton saveButton = new JButton("Save file");
 		JButton exitButton = new JButton("Exit");
+		JButton findButton = new JButton("Find word");
+		JButton removeButton = new JButton("Remove word");
 		
 		console.add(loadButton); //1,1
 		console.add(printButton); //1,2
-		console.add(saveButton); //1,3
-		console.add(exitButton); //1,4
+		console.add(findButton); //1,3
+		console.add(removeButton); //1,4
+		console.add(saveButton); //1,5
+		console.add(exitButton); //1,6
 		
 		JPanel contentPanel = new JPanel();
 		
