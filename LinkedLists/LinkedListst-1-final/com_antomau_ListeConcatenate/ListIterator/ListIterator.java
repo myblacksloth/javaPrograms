@@ -1,5 +1,9 @@
 package com_antomau_ListeConcatenate.ListIterator;
 import com_antomau_ListeConcatenate.Studente.Studente;
+/**
+ * Questa interfaccia costituisce un interfaccia per l'iteratore della lista.
+ * @author Antonio Maulucci http://www.antomau.com
+ */
 public interface ListIterator {
 	Studente next();
 	boolean hasNext();
