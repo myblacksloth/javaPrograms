@@ -91,26 +91,13 @@ public class UserListeConcatenate {
 					return;
 				} //end of try/catch
 				
-				//String cognome, nome, esame;
-				//int matricola, vesame;
 				
 				while (in.hasNext())
 				{
-					/*
-					cognome = in.next();
-					nome = in.next();
-					matricola = in.nextInt();
-					esame = in.next();
-					vesame = in.nextInt();
-					*/
-					
 					Studente stud = new Studente(in.next(), in.next(), in.nextInt(), in.next(), in.nextInt()); //vengono acquisiti i dati e si fa in modo che lo scanner scorra verso la serie di token successiva (più token vengono scansionati insieme)
 					
 					myList.addFirst(stud);
 					
-					//add data to list here
-					//list.add(cognome, nome, matricola, esame, vesame);
-					//System.out.println("current data = " + stud.getSurname() + " " + stud.getName() + " " + stud.getSerial() + " " + stud.getExamName() + " " + stud.getExamVote()); //debug
 				} //end of while
 				
 			}
