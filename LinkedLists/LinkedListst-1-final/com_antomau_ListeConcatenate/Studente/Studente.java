@@ -1,5 +1,9 @@
 package com_antomau_ListeConcatenate.Studente;
 
+/**
+ * Questa classe definisce quello che e' l'oggetto Studente.
+ * @author Antonio Maulucci http://www.antomau.com
+ */
 public class Studente {
 	
 	//variabili
