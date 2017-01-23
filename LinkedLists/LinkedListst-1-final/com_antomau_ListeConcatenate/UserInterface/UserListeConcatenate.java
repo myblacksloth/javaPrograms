@@ -69,6 +69,7 @@ public class UserListeConcatenate {
 		f.add(contentPanel, BorderLayout.CENTER);
 		
 		
+		
 		f.pack();
 		
 		
