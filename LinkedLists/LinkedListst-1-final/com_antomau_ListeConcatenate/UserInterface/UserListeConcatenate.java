@@ -526,7 +526,7 @@ public class UserListeConcatenate {
 				{
 					@Override
 					public void actionPerformed (ActionEvent e)
-					{
+					{ // (C) Antonio Maulucci 2017 - http://www.antomau.com
 						String results = "<html><table border=\"1\"><tr><th>Surname</th><th>Name</th><th>Serial Number</th><th>Exam's Name</th><th>Exam's Vote</th></tr>";
 						myIterator.reset(); //reset dell'iteratore
 						while (myIterator.hasNext()) //fintanto che nella lista esiste un nodo
