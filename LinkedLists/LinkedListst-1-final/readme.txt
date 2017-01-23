@@ -1,0 +1,1 @@
+Questo programma legge dei dati da file e li inserisce in una lista concatenata.
