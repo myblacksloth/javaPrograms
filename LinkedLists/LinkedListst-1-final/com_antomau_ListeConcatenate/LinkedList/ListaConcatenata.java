@@ -6,7 +6,10 @@ import java.util.NoSuchElementException;
 
 import com_antomau_ListeConcatenate.ListIterator.ListIterator;
 
-
+/**
+ * Questa classe definisce quella che sara' una lista concatenata.
+ * @author Antonio Maulucci http://www.antomau.com
+ */
 public class ListaConcatenata {
 	
 	
