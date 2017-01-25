@@ -249,12 +249,59 @@ public class HashSet {
 		
 		@Override
 		public void remove() {
-			// TODO Auto-generated method stub
+			
+			if (previous!=null && previous.link==current) previous.link = current.link;
+			else if (previousBucket < bucket) buckets[bucket] = current.link;
+			else throw new NoSuchElementException();
+			
+			//le istruzioni seguenti impediscono due eliminazioni consecutive
+			current = previous;
+			bucket = previousBucket;
 			
 		}
+		
+		
+		
+		
+	} //end of iterator class
+	
+	
+	
+	
+	
+	/**
+	 * @return Un iteratore per la lista concatenata.
+	 */
+	public StructIterator getIterator()
+	{
+		return new StructIterator();
 	}
 	
 	
+	
+	
+	
+	/**
+	 * @return A string to set as JLabel text about content of structure.
+	 */
+	public String toLabelString()
+	{
+		String result="";
+		
+		result += "<html><table border=\"1\"><tr><th>Author</th><th>Title</th><th>Year</th></tr>";
+		
+		StructIterator iterator = new StructIterator();
+		
+		while (iterator.hasNext()) {
+			
+			result += "<tr><td>" + iterator.next().getAuthor() + "</td><td>" + iterator.next().getTitle() + "</td><td>" + iterator.next().getYear() + "</td></tr>";
+			
+		} //end of while
+		
+		result += "</table></html>";
+		
+		return result;
+	}
 	
 	
 	
