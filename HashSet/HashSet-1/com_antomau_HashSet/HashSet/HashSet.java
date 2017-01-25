@@ -2,6 +2,8 @@ package com_antomau_HashSet.HashSet;
 
 import com_antomau_HashSet.Book.Book;
 
+import java.util.NoSuchElementException;
+
 /**
  * Questa classe deinisce la tabella hash.
  * @author Antonio Maulucci http://www.antomau.com
@@ -165,6 +167,92 @@ public class HashSet {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Viene creato un iteratore per la lista
+	 * @author Antonio Maulucci http://www.antomau.com
+	 *
+	 */
+	class StructIterator implements HashSetIterator
+	{
+		//variabili
+		private int bucket; //indice dell'array corrente
+		private int previousBucket; //indice dell'array precedente
+		private Node current; //nodo corrente della lista
+		private Node previous; //nodo precedente della lista
+		
+		
+		
+		
+		/**
+		 * Costruttore della classe.
+		 */
+		public StructIterator()
+		{
+			this.bucket = -1; //because when you launch program this will be incremented to 0 --> the 1st index of array
+			this.previousBucket = -1;
+			
+			this.current = null;
+			this.previous = null;
+		}
+		
+		
+		
+		
+		
+		@Override
+		public boolean hasNext() {
+			if (current != null && current.link != null) return true;
+			
+			for (int b=bucket+1; b<buckets.length; b++)
+			{
+				if (buckets[b] != null) return true;
+			}
+			
+			return false;
+		}
+		
+		
+		
+		
+		
+		@Override
+		public Book next() {
+			
+			previous = current;
+			previousBucket = bucket;
+			
+			if (current==null || current.link==null) {
+				
+				bucket++;
+				
+				while (bucket<buckets.length && buckets[bucket]==null) bucket++;
+				
+				if (bucket < buckets.length) current=buckets[bucket];
+				else throw new NoSuchElementException();
+				
+			} else
+				current = current.link;
+			
+			return current.aBook;
+		}
+		
+		
+		
+		
+		
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+			
+		}
+	}
 	
 	
 	

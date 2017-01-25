@@ -75,5 +75,4 @@ public class Book {
 	}
 	
 	
-	
 } //end of class
