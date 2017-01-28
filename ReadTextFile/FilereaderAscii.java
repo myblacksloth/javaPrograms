@@ -2,10 +2,13 @@ import java.io.*;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
+/**
+ * @Author Antonio Maulucci http://www.antomau.com
+ */
 public class FilereaderAscii
 {
 
-    private static File file;
+   private static File file;
 
    private static Scanner in = new Scanner(System.in);
    private static Scanner inFile;
