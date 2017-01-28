@@ -11,3 +11,8 @@ In this repo you can find my programs written in Java. You can use it to learn J
 > Warning! You can find errors here!
 > 
 > use https://stackedit.io or http://dillinger.io/ (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to edit *.md files
+
+| Language | Author | Year |
+| --- | --- | --- |
+| Java ~ 8 | Antonio Maulucci | 2017 |
+| Java ~ 8 | Antonio Maulucci | 2016 |
