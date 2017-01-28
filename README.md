@@ -1,7 +1,7 @@
 # Antonio Maulucci's Java Programs
 
 ![antonio maulucci logo](http://www.antomau.com/AntonioMaulucciLogo.png)
-![java logo](http://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png)
+![java logo](http://logodatabases.com/wp-content/uploads/2012/03/java-logo-large.png)
 
 ----------
 In this repo you can find my programs written in Java. You can use it to learn Java or to know how to program it.
