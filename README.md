@@ -10,7 +10,13 @@ In this repo you can find my programs written in Java. You can use it to learn J
 
 > Warning! You can find errors here!
 > 
-> use https://stackedit.io or http://dillinger.io/ (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to edit *.md files
+> to edit *.md files you can use
+> [Classeur](https://app.classeur.io)
+>
+> [StackEdit](https://stackedit.io)
+>
+> [Dillinger](http://dillinger.io/)
+> [Dillinger CheatSheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 | Language | Author | Year |
 | --- | --- | --- |
