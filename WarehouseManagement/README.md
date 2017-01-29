@@ -34,6 +34,7 @@ Un terzo file denominato **giacenze.dat** contiene le disponibilità nei vari ma
 Ogni tripla denota che il prodotto con *codice prodotto* indicato è disponibile nel magazzino *codice magazzino* indicato nella quantità *quantità*.
 > Esempio:
 > La tripla indicata denota che il magazzino d Roma contiene 20 cellulare smartphone
+
 ## Istruzioni per lo sviluppo
 Scrivere un programma che include tutte le necessarie classi, ed implementi alcune funzionalità, come ad esempio, dato un codice di prodotto, restituire l'elenco di tutti i magazzini che lo contengono.
 ### Struttura del report
