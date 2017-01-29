@@ -16,3 +16,6 @@ In this repo you can find my programs written in Java. You can use it to learn J
 | --- | --- | --- |
 | Java ~ 8 | Antonio Maulucci | 2017 |
 | Java ~ 8 | Antonio Maulucci | 2016 |
+
+[comment]: <> (this is a comment in a markdown file)
+[comment]: <> (© Antonio Maulucci 2017)
