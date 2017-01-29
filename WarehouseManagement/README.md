@@ -10,7 +10,7 @@ Un file  denominato **magazzino.dat** contiene le informazioni relative alla loc
 | città | Roma |
 | nazione | Italia |
 | numero di telefono | ++3906xxxxxx |
-| fax | ++3906xxxxxxxx|
+| fax | ++3906xxxxxxxx |
 
 Un secondo file, denominato **prodotti.dat**, contiene le informazioni relative ai prodotti:
 | tipo di dato | dato |
