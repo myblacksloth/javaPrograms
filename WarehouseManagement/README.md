@@ -9,7 +9,7 @@ Un file  denominato **magazzino.dat** contiene le informazioni relative alla loc
 | indirizzo | via magno, 7 |
 | città | Roma |
 | nazione | Italia |
-|numero di telefono | ++3906xxxxxx |
+| numero di telefono | ++3906xxxxxx |
 | fax | ++3906xxxxxxxx|
 
 Un secondo file, denominato **prodotti.dat**, contiene le informazioni relative ai prodotti:
