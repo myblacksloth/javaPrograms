@@ -2,7 +2,10 @@ package com_antomau_WarehouseManagement.UserInterface;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionEvent;
 
 
 
@@ -14,7 +17,10 @@ public class UserWarehouseManagement {
 
     private static Scanner in;
 
-
+    /**
+     * This is the main method
+     * @param args args to main (this program doesen't use that)
+     */
     public static void main(String[] args)
     {
 
@@ -25,7 +31,18 @@ public class UserWarehouseManagement {
         f.setVisible(true);
 
 
+        JButton exitButton = new JButton("exit");
 
+        f.add(exitButton);
+
+        class exitButtonListenerClass implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        }
+        ActionListener exitButtonListener = new exitButtonListenerClass();
+        exitButton.addActionListener(exitButtonListener);
 
 
         f.pack();
@@ -35,4 +52,4 @@ public class UserWarehouseManagement {
 
 
 
-}
+} //end of class
