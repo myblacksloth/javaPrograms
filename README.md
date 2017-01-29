@@ -10,7 +10,7 @@ In this repo you can find my programs written in Java. You can use it to learn J
 
 > Warning! You can find errors here!
 > 
-> to edit *.md files you can use\s\s
+> to edit *.md files you can use \s
 > [Classeur](https://app.classeur.io)
 >
 > [StackEdit](https://stackedit.io)
