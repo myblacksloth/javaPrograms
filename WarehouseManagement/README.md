@@ -50,6 +50,8 @@ Per realizzare questo programma viene utilizzato l'editor (IDE) *IntelliJ Idea*
 
 [My WebSite](http://www.antomau.com)
 
+*© Antonio Maulucci 2017*
+
 <!-- this is a readme file -->
 <!-- it's written in markdown language -->
 <!-- it can be converted to html language -->
