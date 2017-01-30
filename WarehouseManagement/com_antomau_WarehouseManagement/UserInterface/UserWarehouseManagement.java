@@ -2,6 +2,7 @@ package com_antomau_WarehouseManagement.UserInterface;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
@@ -31,9 +32,98 @@ public class UserWarehouseManagement {
         f.setVisible(true);
 
 
+
+
+
+
+        JPanel consolePanel = new JPanel();
+        consolePanel.setLayout(new GridLayout(1,2));
+
+
+
+        JPanel fileManagement = new JPanel();
+        fileManagement.setLayout(new GridLayout(3,2));
+        //
+        //
+        JLabel pathf1 = new JLabel();
+        JLabel pathf2 = new JLabel();
+        JLabel pathf3 = new JLabel();
+        //
+        //
+        JFileChooser filec1 = new JFileChooser();
+        JFileChooser filec2 = new JFileChooser();
+        JFileChooser filec3 = new JFileChooser();
+        //
+        //
+        JButton fileb1 = new JButton("Open Warehouses database");
+        JButton fileb2 = new JButton("Open Products database");
+        JButton fileb3 = new JButton("Open Warehousing database");
+        //
+        //
+        //
+        fileManagement.add(pathf1); //1,1
+        fileManagement.add(fileb1); //1,2
+        fileManagement.add(pathf2); //2,1
+        fileManagement.add(fileb2); //2,2
+        fileManagement.add(pathf3); //3,1
+        fileManagement.add(fileb3); //3,2
+
+
+
+
+
+
+        JPanel buttonsPanel = new JPanel();
+        buttonsPanel.setLayout(new GridLayout(1,1));
+
+
+
+        //buttons
         JButton exitButton = new JButton("exit");
 
-        f.add(exitButton);
+        buttonsPanel.add(exitButton);
+
+
+
+
+
+
+        consolePanel.add(fileManagement); //1,1
+        consolePanel.add(buttonsPanel); //1,2
+
+
+
+
+
+
+
+
+
+        JPanel contentPanel = new JPanel();
+
+
+
+
+
+
+
+        f.add(consolePanel, BorderLayout.NORTH);
+        f.add(contentPanel, BorderLayout.CENTER);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         class exitButtonListenerClass implements ActionListener {
             @Override
@@ -43,6 +133,28 @@ public class UserWarehouseManagement {
         }
         ActionListener exitButtonListener = new exitButtonListenerClass();
         exitButton.addActionListener(exitButtonListener);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         f.pack();
 
