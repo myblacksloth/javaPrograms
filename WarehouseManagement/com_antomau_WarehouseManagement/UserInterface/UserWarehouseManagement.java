@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionEvent;
+import java.io.FileNotFoundException;
 
 
 
@@ -136,7 +137,50 @@ public class UserWarehouseManagement {
 
 
 
+        class fileb1ListenerClass implements ActionListener
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                //show dialog windows and open file
+                filec1.setDialogTitle("Open Warehouse Database");
+                filec1.showOpenDialog(f);
 
+                //set path label
+                try {
+                    pathf1.setText(filec1.getSelectedFile().getAbsolutePath());
+                } catch (Exception exc) {
+                    exc.printStackTrace();
+                }
+
+                f.pack();
+            }
+        }
+        ActionListener fileb1Listener = new fileb1ListenerClass();
+        fileb1.addActionListener(fileb1Listener);
+
+
+
+
+
+        class fileb2ListenerClass implements ActionListener
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                filec2.setDialogTitle("Open Products Database");
+                filec2.showOpenDialog(f);
+
+                try {
+                    pathf2.setText(filec2.getSelectedFile().getAbsolutePath());
+                } catch (Exception exc) {
+                    exc.printStackTrace();
+                }
+                f.pack();
+            }
+        }
+        ActionListener fileb2Listener = new fileb2ListenerClass();
+        fileb2.addActionListener(fileb2Listener);
 
 
 
