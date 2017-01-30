@@ -4,11 +4,12 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.util.Scanner;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionEvent;
-import java.io.FileNotFoundException;
+// import java.io.File; //to manage files
 
+
+import com_antomau_WarehouseManagement.CertainObjects.*;
 
 
 /**
@@ -75,13 +76,17 @@ public class UserWarehouseManagement {
 
 
         JPanel buttonsPanel = new JPanel();
-        buttonsPanel.setLayout(new GridLayout(1,1));
+        buttonsPanel.setLayout(new GridLayout(2,1));
 
 
 
         //buttons
+        JButton loadDataButton = new JButton("Load data");
         JButton exitButton = new JButton("exit");
-
+        //
+        //
+        //
+        buttonsPanel.add(loadDataButton);
         buttonsPanel.add(exitButton);
 
 
@@ -184,6 +189,68 @@ public class UserWarehouseManagement {
 
 
 
+
+
+
+
+
+        class fileb3ListenerClass implements ActionListener
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                filec3.setDialogTitle("Open Warehousing Database");
+                filec3.showOpenDialog(f);
+
+                try {
+                    pathf3.setText(filec3.getSelectedFile().getAbsolutePath());
+                } catch (Exception exc) {
+                    exc.printStackTrace();
+                }
+                f.pack();
+            }
+        }
+        ActionListener fileb3Listener = new fileb3ListenerClass();
+        fileb3.addActionListener(fileb3Listener);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        class loadDataButtonListenerClass implements ActionListener
+        {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+
+                    in = new Scanner(filec1.getSelectedFile());
+
+
+                    while (in.hasNextLine())
+                    {
+
+                        CertainWarehouse warehouse = new CertainWarehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
+
+                        System.out.println("debug - " + warehouse.getSerial() + " - " + warehouse.getAddress() + " - " + warehouse.getCity() + " - " + warehouse.getCountry() + " - " + warehouse.getTelephone() + " - " + warehouse.getFax()); //debug
+
+                    } //end of while
+
+                } catch (Exception exc) {
+                    exc.printStackTrace();
+                }
+            }
+        }
+        ActionListener loadDataButtonListener = new loadDataButtonListenerClass();
+        loadDataButton.addActionListener(loadDataButtonListener);
 
 
 

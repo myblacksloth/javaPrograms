@@ -9,10 +9,10 @@ public class CertainWarehouse extends GenericWarehouse {
 
 
     //variabili
-    private int telephoneNumber, faxNumber;
+    private String telephoneNumber, faxNumber;
 
 
-    public CertainWarehouse(String serial, String address, String city, String country, int telephoneNumber, int faxNumber)
+    public CertainWarehouse(String serial, String address, String city, String country, String telephoneNumber, String faxNumber)
     {
         super(serial, address, city, country);
 
@@ -23,14 +23,14 @@ public class CertainWarehouse extends GenericWarehouse {
 
 
 
-    public int getTelephone()
+    public String getTelephone()
     {
         return this.telephoneNumber;
     }
 
 
 
-    public int getFax()
+    public String getFax()
     {
         return this.faxNumber;
     }
