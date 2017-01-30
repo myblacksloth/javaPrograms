@@ -20,6 +20,24 @@ public class UserWarehouseManagement {
 
     private static Scanner in;
 
+
+
+
+
+
+
+    private static Map <Warehouse, Product> myManager = new Map <Warehouse, Product> ();
+
+
+
+
+
+
+
+
+
+
+
     /**
      * This is the main method
      * @param args args to main (this program doesen't use that)
@@ -238,7 +256,7 @@ public class UserWarehouseManagement {
                     while (in.hasNextLine())
                     {
 
-                        CertainWarehouse warehouse = new CertainWarehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
+                        Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
 
                         System.out.println("debug - " + warehouse.getSerial() + " - " + warehouse.getAddress() + " - " + warehouse.getCity() + " - " + warehouse.getCountry() + " - " + warehouse.getTelephone() + " - " + warehouse.getFax()); //debug
 
