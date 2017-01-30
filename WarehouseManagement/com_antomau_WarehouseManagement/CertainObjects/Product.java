@@ -9,7 +9,7 @@ public class Product extends GenericProduct
 {
 
     //variabili
-    private String description;
+    public String description;
 
 
     /**

@@ -9,7 +9,7 @@ public class Warehouse extends GenericWarehouse {
 
 
     //variabili
-    private String telephoneNumber, faxNumber;
+    public String telephoneNumber, faxNumber;
 
 
     public Warehouse(String serial, String address, String city, String country, String telephoneNumber, String faxNumber)

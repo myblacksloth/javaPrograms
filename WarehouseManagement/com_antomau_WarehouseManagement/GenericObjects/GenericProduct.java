@@ -6,8 +6,8 @@ package com_antomau_WarehouseManagement.GenericObjects;
 public class GenericProduct {
 
     //variabili
-    String serial;
-    int price;
+    public String serial;
+    public int price;
 
     /**
      * Class' builder

@@ -9,7 +9,7 @@ public class Warehousing extends GenericWarehousing {
 
 
     //variabili
-    int amount;
+    public int amount;
 
 
     /**

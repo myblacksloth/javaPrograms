@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.util.Scanner;
 // import java.io.File; //to manage files
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.HashMap;
 import java.util.Set;
 
 
@@ -21,7 +21,7 @@ import com_antomau_WarehouseManagement.CertainObjects.*;
 public class UserWarehouseManagement {
 
 
-    private static Map <Warehouse, Product> myManager = new TreeMap <Warehouse, Product> ();
+    private static Map <Warehouse, Product> myManager = new HashMap <Warehouse, Product> ();
 
 
 
@@ -273,7 +273,7 @@ public class UserWarehouseManagement {
                                     if (currentWarehousing.getProductSerial().equals(currentProduct.getSerial()))
                                     {
                                         myManager.put(currentWarehouse, currentProduct); //put object into the map
-                                        System.out.println(currentWarehouse.getSerial() + " <-->" + currentProduct.getSerial()); //debug
+                                        System.out.println(currentWarehouse.getSerial() + " <--> " + currentProduct.getSerial()); //debug
                                     } //end of if
 
                                 } //end of while

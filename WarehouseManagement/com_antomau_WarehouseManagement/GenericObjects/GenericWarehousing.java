@@ -6,7 +6,7 @@ package com_antomau_WarehouseManagement.GenericObjects;
 public class GenericWarehousing {
 
     //variabili
-    private String warehouseSerial, productSerial;
+    public String warehouseSerial, productSerial;
 
     /**
      * Class' builder
