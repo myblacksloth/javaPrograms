@@ -250,11 +250,38 @@ public class UserWarehouseManagement {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    in = new Scanner(filec3.getSelectedFile());
+                    in = new Scanner(filec3.getSelectedFile()); //viene caricato il file delle giacenze nello scanner
+
+
+
+
+
+
+                    Scanner inMagazzini = new Scanner(filec1.getSelectedFile()); //scanner per il file dei magazzini
 
 
                     while (in.hasNextLine())
                     {
+
+                        Warehousing currentWarehousing = new Warehousing(in.nextLine(), in.nextLine(), Integer.parestInt(in.nextLine()));
+
+
+
+                        while (inMagazzini.hasNext())
+                        {
+
+                            Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
+
+                            if (currentWarehousing.getWarehouseSerial().equals(warehouse.getSerial()))
+                            {
+
+                                //??????
+
+                            } //end of if
+
+                        } //end of while
+
+
 
                         //Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
 
