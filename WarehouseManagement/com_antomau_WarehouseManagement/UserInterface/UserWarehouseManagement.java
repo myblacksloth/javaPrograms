@@ -70,9 +70,9 @@ public class UserWarehouseManagement {
         JLabel pathf3 = new JLabel();
         //
         //
-        JFileChooser filec1 = new JFileChooser();
-        JFileChooser filec2 = new JFileChooser();
-        JFileChooser filec3 = new JFileChooser();
+        JFileChooser filec1 = new JFileChooser(); //file dei magazzini
+        JFileChooser filec2 = new JFileChooser(); //file dei prodotti
+        JFileChooser filec3 = new JFileChooser(); //file delle giacenze
         //
         //
         JButton fileb1 = new JButton("Open Warehouses database");
@@ -250,15 +250,15 @@ public class UserWarehouseManagement {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    in = new Scanner(filec1.getSelectedFile());
+                    in = new Scanner(filec3.getSelectedFile());
 
 
                     while (in.hasNextLine())
                     {
 
-                        Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
+                        //Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
 
-                        System.out.println("debug - " + warehouse.getSerial() + " - " + warehouse.getAddress() + " - " + warehouse.getCity() + " - " + warehouse.getCountry() + " - " + warehouse.getTelephone() + " - " + warehouse.getFax()); //debug
+                        //System.out.println("debug - " + warehouse.getSerial() + " - " + warehouse.getAddress() + " - " + warehouse.getCity() + " - " + warehouse.getCountry() + " - " + warehouse.getTelephone() + " - " + warehouse.getFax()); //debug
 
                     } //end of while
 
