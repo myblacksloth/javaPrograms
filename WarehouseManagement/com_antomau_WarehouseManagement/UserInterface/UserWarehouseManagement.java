@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.util.Scanner;
 // import java.io.File; //to manage files
 import java.util.Map;
+import java.util.TreeMap;
 
 
 import com_antomau_WarehouseManagement.CertainObjects.*;
@@ -27,7 +28,7 @@ public class UserWarehouseManagement {
 
 
 
-    private static Map <Warehouse, Product> myManager = new Map <Warehouse, Product> ();
+    private static Map <Warehouse, Product> myManager = new TreeMap <Warehouse, Product> ();
 
 
 
