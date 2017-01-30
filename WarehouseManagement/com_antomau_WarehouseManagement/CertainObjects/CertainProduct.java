@@ -1,15 +1,15 @@
 package com_antomau_WarehouseManagement.CertainObjects;
 
-import com_antomau_WarehouseManagement.GenericObjects.*;
+import com_antomau_WarehouseManagement.GenericObjects.GenericProduct;
 
 /**
- * Created by Anto on 30/01/17.
+ * Created by Antonio Maulucci http://www.antomau.com on 30/01/17.
  */
 public class CertainProduct extends GenericProduct
 {
 
     //variabili
-    String description;
+    private String description;
 
 
     /**
