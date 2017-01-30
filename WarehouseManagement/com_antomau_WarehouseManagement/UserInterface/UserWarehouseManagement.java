@@ -44,7 +44,6 @@ public class UserWarehouseManagement {
         ActionListener exitButtonListener = new exitButtonListenerClass();
         exitButton.addActionListener(exitButtonListener);
 
-
         f.pack();
 
     } //end of main
