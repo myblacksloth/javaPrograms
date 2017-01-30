@@ -260,6 +260,10 @@ public class UserWarehouseManagement {
                     Scanner inMagazzini = new Scanner(filec1.getSelectedFile()); //scanner per il file dei magazzini
 
 
+
+                    Scanner inProdotti = new Scanner(filec2.getSelectedFile());
+
+
                     while (in.hasNextLine())
                     {
 
@@ -267,7 +271,7 @@ public class UserWarehouseManagement {
 
 
 
-                        while (inMagazzini.hasNext())
+                        while (inMagazzini.hasNextLine())
                         {
 
                             Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
@@ -275,7 +279,20 @@ public class UserWarehouseManagement {
                             if (currentWarehousing.getWarehouseSerial().equals(warehouse.getSerial()))
                             {
 
-                                //??????
+
+                                while (inProdotti.hasNextLine())
+                                {
+
+                                    Product currentProduct = new Product(in.hasNextLine(), in.hasNextLine(), Integer.parseInt(in.hasNextLine()));
+
+                                    if (currentWarehousing.getProductSerial().equals(currentProduct.getSerial()))
+                                    {
+
+                                        myManager.put(warehouse, currentProduct);
+
+                                    } //end of if
+
+                                } //end of while
 
                             } //end of if
 
