@@ -268,7 +268,7 @@ public class UserWarehouseManagement {
                     while (in.hasNextLine())
                     {
 
-                        Warehousing currentWarehousing = new Warehousing(in.nextLine(), in.nextLine(), Integer.parestInt(in.nextLine()));
+                        Warehousing currentWarehousing = new Warehousing(in.nextLine(), in.nextLine(), Integer.parseInt(in.nextLine()));
 
 
 
