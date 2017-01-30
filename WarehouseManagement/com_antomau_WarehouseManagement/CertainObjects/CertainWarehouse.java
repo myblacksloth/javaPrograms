@@ -1,9 +1,11 @@
 package com_antomau_WarehouseManagement.CertainObjects;
 
+import com_antomau_WarehouseManagement.GenericObjects.GenericWarehouse;
+
 /**
  * Created by Antonio Maulucci http://www.antomau.com on 30/01/17.
  */
-public class CertainWarehouse {
+public class CertainWarehouse extends GenericWarehouse {
 
 
     //variabili

@@ -7,17 +7,28 @@ public class GenericProduct {
 
     //variabili
     String serial;
-    int amount;
+    int price;
 
-    public GenericProduct(String serial, int amount)
+    /**
+     * Class' builder
+     * @param serial Product's serial code
+     * @param price Product's price
+     */
+    public GenericProduct(String serial, int price)
     {
         this.serial = serial;
-        this.amount = amount;
+        this.price = price;
     }
 
     public String getSerial()
     {
         return this.serial;
+    }
+
+
+    public int getPrice()
+    {
+        return this.price;
     }
 
 

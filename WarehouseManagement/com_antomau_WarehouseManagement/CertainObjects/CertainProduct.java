@@ -13,14 +13,14 @@ public class CertainProduct extends GenericProduct
 
 
     /**
-     *
-     * @param serial
-     * @param description
-     * @param amount
+     * Class' builder
+     * @param serial Product's serial code
+     * @param description Produt's description
+     * @param price Product's price
      */
-    public CertainProduct(String serial, String description, int amount)
+    public CertainProduct(String serial, String description, int price)
     {
-        super(serial, amount);
+        super(serial, price);
         this.description = description;
     }
 
