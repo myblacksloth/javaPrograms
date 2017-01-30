@@ -30,7 +30,7 @@ public class Product extends GenericProduct
 
     public String getDescription()
     {
-        return this.description;
+        return description;
     }
 
 } //end of class

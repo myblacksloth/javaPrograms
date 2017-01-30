@@ -21,20 +21,7 @@ import com_antomau_WarehouseManagement.CertainObjects.*;
 public class UserWarehouseManagement {
 
 
-    private static Scanner in;
-
-
-
-
-
-
-
     private static Map <Warehouse, Product> myManager = new TreeMap <Warehouse, Product> ();
-
-
-
-
-
 
 
 
@@ -253,47 +240,40 @@ public class UserWarehouseManagement {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    in = new Scanner(filec3.getSelectedFile()); //viene caricato il file delle giacenze nello scanner
+
+
+
+                    Scanner inWarehousing = new Scanner(filec3.getSelectedFile());
 
 
 
 
-
-
-                    Scanner inMagazzini = new Scanner(filec1.getSelectedFile()); //scanner per il file dei magazzini
-
-
-
-                    Scanner inProdotti = new Scanner(filec2.getSelectedFile());
-
-
-                    while (in.hasNextLine())
+                    while (inWarehousing.hasNextLine()) //finanto che nel file delle giacenze esista la prossima linea
                     {
 
-                        Warehousing currentWarehousing = new Warehousing(in.nextLine(), in.nextLine(), Integer.parseInt(in.nextLine()));
+                        Warehousing currentWarehousing = new Warehousing(inWarehousing.nextLine(), inWarehousing.nextLine(), Integer.parseInt(inWarehousing.nextLine())); //nuovo oggetto di tipo giacenze
 
+                        Scanner inWarehouse = new Scanner(filec1.getSelectedFile());
 
-
-                        while (inMagazzini.hasNextLine())
+                        while (inWarehouse.hasNextLine())
                         {
 
-                            Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
+                            Warehouse currentWarehouse = new Warehouse(inWarehouse.nextLine(), inWarehouse.nextLine(), inWarehouse.nextLine(), inWarehouse.nextLine(), inWarehouse.nextLine(), inWarehouse.nextLine());
 
-                            if (currentWarehousing.getWarehouseSerial().equals(warehouse.getSerial()))
+                            if (currentWarehousing.getWarehouseSerial().equals(currentWarehouse.getSerial()))
                             {
 
+                                Scanner inProduct = new Scanner(filec2.getSelectedFile());
 
-                                while (inProdotti.hasNextLine())
+                                while (inProduct.hasNextLine())
                                 {
 
-                                    Product currentProduct = new Product(in.nextLine(), in.nextLine(), Integer.parseInt(in.nextLine()));
+                                    Product currentProduct = new Product(inProduct.nextLine(), inProduct.nextLine(), Integer.parseInt(inProduct.nextLine()));
 
                                     if (currentWarehousing.getProductSerial().equals(currentProduct.getSerial()))
                                     {
-
-                                        myManager.put(warehouse, currentProduct);
-                                        return;
-
+                                        myManager.put(currentWarehouse, currentProduct); //put object into the map
+                                        System.out.println(currentWarehouse.getSerial() + " <-->" + currentProduct.getSerial()); //debug
                                     } //end of if
 
                                 } //end of while
@@ -302,13 +282,18 @@ public class UserWarehouseManagement {
 
                         } //end of while
 
-
-
-                        //Warehouse warehouse = new Warehouse(in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine(), in.nextLine());
-
-                        //System.out.println("debug - " + warehouse.getSerial() + " - " + warehouse.getAddress() + " - " + warehouse.getCity() + " - " + warehouse.getCountry() + " - " + warehouse.getTelephone() + " - " + warehouse.getFax()); //debug
-
                     } //end of while
+
+
+
+
+
+
+
+
+
+
+
 
                 } catch (Exception exc) {
                     exc.printStackTrace();
@@ -316,23 +301,8 @@ public class UserWarehouseManagement {
 
 
 
-                /*
-                DEBUG AREA // DEBUG AREA // DEBUG AREA
-                 */
-                //
-                Set <Warehouse> keyset = myManager.keySet();
-                //
-                for (Warehouse k : keyset)
-                {
-
-                    Product value = myManager.get(k);
-
-                    System.out.println(k.getSerial() + " <--- debug -->" + value.getSerial()); //debug
-
-                } //end of for
-
-            }
-        }
+            } //end of actionPerformed
+        } //end of loadDataButtonListenerClass
         ActionListener loadDataButtonListener = new loadDataButtonListenerClass();
         loadDataButton.addActionListener(loadDataButtonListener);
 

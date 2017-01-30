@@ -22,13 +22,13 @@ public class GenericProduct {
 
     public String getSerial()
     {
-        return this.serial;
+        return serial;
     }
 
 
     public int getPrice()
     {
-        return this.price;
+        return price;
     }
 
 
