@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Scanner;
 // import java.io.File; //to manage files
+import java.util.Map;
 
 
 import com_antomau_WarehouseManagement.CertainObjects.*;
@@ -283,7 +284,7 @@ public class UserWarehouseManagement {
                                 while (inProdotti.hasNextLine())
                                 {
 
-                                    Product currentProduct = new Product(in.hasNextLine(), in.hasNextLine(), Integer.parseInt(in.hasNextLine()));
+                                    Product currentProduct = new Product(in.nextLine(), in.nextLine(), Integer.parseInt(in.nextLine()));
 
                                     if (currentWarehousing.getProductSerial().equals(currentProduct.getSerial()))
                                     {
