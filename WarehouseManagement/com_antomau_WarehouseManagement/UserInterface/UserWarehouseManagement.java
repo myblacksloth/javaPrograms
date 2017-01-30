@@ -9,6 +9,7 @@ import java.util.Scanner;
 // import java.io.File; //to manage files
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.Set;
 
 
 import com_antomau_WarehouseManagement.CertainObjects.*;
@@ -291,6 +292,7 @@ public class UserWarehouseManagement {
                                     {
 
                                         myManager.put(warehouse, currentProduct);
+                                        return;
 
                                     } //end of if
 
@@ -311,6 +313,24 @@ public class UserWarehouseManagement {
                 } catch (Exception exc) {
                     exc.printStackTrace();
                 }
+
+
+
+                /*
+                DEBUG AREA // DEBUG AREA // DEBUG AREA
+                 */
+                //
+                Set <Warehouse> keyset = myManager.keySet();
+                //
+                for (Warehouse k : keyset)
+                {
+
+                    Product value = myManager.get(k);
+
+                    System.out.println(k.getSerial() + " <--- debug -->" + value.getSerial()); //debug
+
+                } //end of for
+
             }
         }
         ActionListener loadDataButtonListener = new loadDataButtonListenerClass();
