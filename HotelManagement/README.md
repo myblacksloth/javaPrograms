@@ -4,6 +4,7 @@
 
 Una catena di alberghi possiede un archivio dei propri alberghi.
 Nel file **alberghi.dat** sono memorizzate le informazioni relative alla localizzazione degli alberghi, come segue:
+
 | tipo di dato | dato |
 | ---: | :--- |
 | codice albergo | ALB1 |
@@ -17,6 +18,7 @@ Nel file **alberghi.dat** sono memorizzate le informazioni relative alla localiz
 Un secondo file denominato **stanze.dat** contiene le informazioni relative alle stanze presenti in ciascun albergo. Infatti, ciascun albergo ha stanze che si differenziano per la tipologia. Ogni tipologia offre servizi differenti.
 L'elenco delle tipologie di un albergo viene separato dall'elenco delle tipologie di un altro albergo mediante il carattere *#*
 Il file è strutturato come segue:
+
 | tipo di dato | dato |
 | ---: | :--- |
 | codice albergo | ALB1 |
@@ -31,6 +33,7 @@ Il file è strutturato come segue:
 | ..... | ..... |
 | # | |
 | ... altro albergo ... | |
+
 Inserire tutti i dati nel modo come visto sopra e aggiungere nuove tipologie di stanze.
 
 ## Istruzioni per lo sviluppo
