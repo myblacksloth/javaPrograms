@@ -21,18 +21,19 @@ Il file è strutturato come segue:
 
 | tipo di dato | dato |
 | ---: | :--- |
-| codice albergo | ALB1 |
-| numero di stanze tip.1 | 12 |
-| prezzo tip.1 | 30 |
-| tv tip.1 | si |
-| condizionatore tip.1 | no |
-| frigo tip.1 | si |
-| internet tip.1 | no |
-| numero di stanzw rip.2 | 7 |
-| prezzo tip.2 | 90 |
-| ..... | ..... |
-| # | |
-| ... altro albergo ... | |
+|codice albergo | alb1 |
+| tipologia di stanza | x |
+| numero di stanze della tipologia x | 12 |
+| prezzo stanza della tipologia x | 30 |
+| tv tip.x | si |
+| condizionatore tip.x | no |
+| frigo tip.x | si |
+| internet tip.x | no |
+| ... altre stanze | ... |
+| # | *questo carattere divide gli hotel* |
+| altro albergo ... | ... |
+
+
 
 Inserire tutti i dati nel modo come visto sopra e aggiungere nuove tipologie di stanze.
 
@@ -46,7 +47,7 @@ Scrivere un programma che implementi tutte le classi ed i relativi metodi per la
  - trovare alberghi che hanno un costo <50€ ed offrono aria condizionata
 
 ### Info
-Non vi sono note sull'IDE di sviluppo
+Per realizzare il programma viene utilizzato l'IDE *IntelliJ Idea*
 
 [My WebSite](http://www.antomau.com)
 
