@@ -30,7 +30,7 @@ Il file è strutturato come segue:
 | frigo tip.x | si |
 | internet tip.x | no |
 | ... altre stanze | ... |
-| # | *questo carattere divide gli hotel* |
+| *questo carattere divide gli hotel* | # |
 | altro albergo ... | ... |
 
 
