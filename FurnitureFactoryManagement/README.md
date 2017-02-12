@@ -1,5 +1,11 @@
 # Strutture avanzate: Mappe  e Liste
 
+[//]: # (questa riga permette inserisce un immagine di work in progress)
+
+<center>
+![workInProgress](https://s31.postimg.org/iwyjicjiz/Work_in_progress_1024x603.png)
+</center>
+
 ## Traccia del Programma
 
 Un mobilificio vuole informatizzare la gestione dei clienti e dei preventivi.
