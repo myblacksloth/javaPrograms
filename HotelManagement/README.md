@@ -1,5 +1,10 @@
 # Struttre avanzate: Le mappe
 
+[//]: # (questa riga permette inserisce un immagine di work in progress)
+<center>
+![workInProgress](https://s31.postimg.org/iwyjicjiz/Work_in_progress_1024x603.png)
+</center>
+
 ## Traccia del programma
 
 Una catena di alberghi possiede un archivio dei propri alberghi.
