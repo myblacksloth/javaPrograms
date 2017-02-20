@@ -52,7 +52,7 @@ Scrivere un programma che implementi tutte le classi ed i relativi metodi per la
  - trovare alberghi che hanno un costo <50€ ed offrono aria condizionata
 
 ### Info
-Per realizzare il programma viene utilizzato l'IDE *IntelliJ Idea*
+Per realizzare il programma viene utilizzato l'IDE *Eclipse*
 
 [My WebSite](http://www.antomau.com)
 
