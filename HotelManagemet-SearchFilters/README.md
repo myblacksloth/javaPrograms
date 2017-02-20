@@ -1,4 +1,4 @@
-# Struttre avanzate: Le mappe
+# Struttre avanzate: Liste concatenate
 
 [//]: # (questa riga permette inserisce un immagine di work in progress)
 <center>
