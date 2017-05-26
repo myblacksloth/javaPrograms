@@ -1,3 +1,6 @@
+/*
+ * Copyright Antonio Maulucci 2017 / http://www.antomau.com / License GPL 2.0
+ */
 public class StructIterator implements HashSetIterator
 	{
 		//variabili d'istanza
