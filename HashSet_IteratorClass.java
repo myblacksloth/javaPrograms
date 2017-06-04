@@ -1,14 +1,14 @@
 /*
  * Copyright Antonio Maulucci 2017 / http://www.antomau.com / License GPL 2.0
  */
-public class StructIterator implements HashSetIterator
+private class StructIterator implements HashSetIterator
 	{
 		//variabili d'istanza
-		Node current, previous;
-		int bucket, previousBucket;
+		private Node current, previous;
+		private int bucket, previousBucket;
 		
 		//costruttore
-		public StructIterator()
+		private StructIterator()
 		{
 			this.current = null;
 			this.previous = null;
