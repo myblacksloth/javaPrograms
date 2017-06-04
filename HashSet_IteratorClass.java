@@ -1,5 +1,5 @@
 /*
- * Copyright Antonio Maulucci 2017 / http://www.antomau.com / License GPL 2.0
+ * Copyright Antonio Maulucci 2017 / http://www.antomau.com / License GPL 3.0
  */
 private class StructIterator implements HashSetIterator
 	{
