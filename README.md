@@ -27,7 +27,7 @@ In this repo you can find my programs written in Java. You can use it to learn J
 
 directory:
 
-<img src="./readme/z1.jpg" alt="JavaLogo" width="200"/>
+<img src="./readme/z1.jpg" alt="JavaLogo" width="300"/>
 
 `$ cd {path}/directory `
 
