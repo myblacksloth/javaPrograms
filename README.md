@@ -39,6 +39,13 @@ cd src
 java -cp . MyMauloJ.Classes.Main
 ```
 
+where **main.java** is:
+```java
+package MyMauloJ.Classes;
+//...
+//...
+```
+
 ------------
 
 
